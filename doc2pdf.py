@@ -79,7 +79,10 @@ def main():
     elif len(sys.argv) == 3 and os.path.isfile(sys.argv[1]):
         return convert_one_file(sys.argv[1], sys.argv[2])
 
-if __name__=='__main__':
-    rc = main()
+from application import app
+
+if __name__ == '__main__':
+    app.run()
+
     app.Quit(constants.wdDoNotSaveChanges)
     sys.exit(rc)
